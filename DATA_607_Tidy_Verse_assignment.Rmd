@@ -63,6 +63,12 @@ To keep only age, sex,cp variable we can pass the data disease and age, sex,cp t
 ```{r}
 df<- select(disease, c("age","sex","cp"))
 head(df)
+
+#Extension by Katherine Evers
+#Use ggplot2 to create a boxplot comparing mean age by chest pain group (0-3)
+
+ggplot(df, aes(cp, age, fill = cp, group=cp)) + 
+  geom_boxplot() 
 ```
 
 ## <u>Extended by Santosh Cheruku</u>
